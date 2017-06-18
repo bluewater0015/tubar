@@ -1,0 +1,91 @@
+<!--index.wxml-->
+<!--主页模块-->
+<block wx:if="{{condition}}">
+  <view class="content">
+    <view class="current_box center">
+      <view class="current_city center">
+        <text>当前城市：</text>
+        <text>{{city}}</text>
+      </view>
+    </view>
+    <view class="start_box text_center" bindtap="startEvent">
+      <text class="start">起点</text>
+      <text class="set_out">{{startData}}</text>
+    </view>
+    <view class="end_box text_center" bindtap="endEvent">
+      <text>终点</text>
+      <text>{{endData}}</text>
+    </view>
+    <view class="find_box center">
+      <view class="find center" bindtap="findEvent">
+        <text class="find_text">查询</text>
+      </view>
+    </view>
+  </view>
+</block>
+<!--请输入起点模块-->
+<block wx:if="{{start}}">
+  <view class="start_search_box">
+    <view class="searches center">
+      <view class="search text_center">
+        <text class="search_text center">search</text>
+        <input class="search_input center"  type="text" placeholder="请输入起点" bindinput="startInputEvent"/>
+        <text class="search_back center" bindtap="startBackEvent">back</text>
+      </view>
+    </view>
+    <view class="location_box center">
+      <view class="location">
+        <text class="location_text align_center">我的位置：</text>
+        <text class="location_city align_center">{{address}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+
+<!--请输入起点-展示模块-->
+<block wx:if="{{isShow}}">
+  <view class="start_show_box center">
+    <view class="start_show_content">
+      <view class="start_content align_center" wx:key="unique" bindtap="startItemEvent" wx:for="{{array}}" data-index="{{index}}">
+        {{index}}:{{item.name}}
+      </view>
+    </view>
+  </view>
+</block>
+<!--请输入终点模块-->
+<block wx:if="{{end}}">
+  <view class="end_search_box center">
+    <view class="end_search text_center">
+      <text class="search_text">search</text>
+      <input type="text" placeholder="请输入终点" bindinput="endInputEvent" />
+      <text class="search_back" bindtap="endBackEvent">back</text>
+    </view>
+  </view>
+</block>
+<!--请输入终点-展示模块-->
+<block wx:if="{{isTrue}}">
+  <view class="end_show_box center">
+   <view class="end_show_content">
+    <view class="end_content align_center" bindtap="endItemEvent" wx:for="{{arrays}}" wx:key="unique" data-index="{{index}}">
+     {{index}}:{{item.name}}
+    </view>
+   </view>
+  </view>
+</block>
+<!--查询路线模块-->
+<block wx:if="{{isInquiry}}">
+  <view class="inquiry_box center">
+  <view class="inquiry_content">
+    <view class="inquiry_content_list center">
+    {{startData}} -> {{endData}}
+    </view>
+  </view>
+</view>
+</block>
+<!--测试模块-->
+<!--<view class="test">
+  <text bindtap="testEvent">test</text>
+</view>-->
+
+
+

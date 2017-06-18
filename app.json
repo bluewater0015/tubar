@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/change/change",
+    "pages/route/route",
+    "pages/site/site",
+    "pages/test/test"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3cc51f",
+    "navigationBarTitleText": "图吧公交",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "selectedColor": "#3cc51f",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "images/icon_find.png",
+      "selectedIconPath": "images/icon_find_selected.png",
+      "text": "换乘查询"
+    },{
+      "pagePath": "pages/route/route",
+      "iconPath": "images/icon_route.png",
+      "selectedIconPath": "images/icon_route_selected.png",
+      "text": "线路查询"
+    },{
+      "pagePath": "pages/site/site",
+      "iconPath": "images/icon_site.png",
+      "selectedIconPath": "images/icon_site_selected.png",
+      "text": "站点查询"
+    }]
+  }
+}

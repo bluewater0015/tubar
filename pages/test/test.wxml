@@ -1,0 +1,10 @@
+<!--pages/test/test.wxml-->
+<text>pages/test/test.wxml</text>
+<view style="color:{{color}};">
+    111
+</view>
+<view class="search text_center">
+        <text class="search_text center">search</text>
+        <input class="search_input center"  type="text" placeholder="请输入起点" />
+        <text class="search_delete center" bindtap="startDeleteEvent">delete</text>
+</view>
